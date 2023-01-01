@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/containers/_textFeild.dart';
 import 'package:flutter_ecommerce_app/pages/home.dart';
+import 'package:flutter_ecommerce_app/pages/login.dart';
 import 'package:flutter_ecommerce_app/widgits/theme.dart';
 
 
@@ -38,7 +39,7 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Stack(
           // overflow: Overflow.visible,
           children: [
-            Image.asset("assets/images/layout/bg.png",fit:BoxFit.fill,),
+            Image.asset("assets/images/layout/bg.png",fit:BoxFit.contain,),
             Positioned(
               top: 30,
               right: 50,
@@ -49,7 +50,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 key: _formKey,
                 child: Container(
                   margin: EdgeInsets.only(top: 250),
-                  height: 300,
+                  height: 400,
                   child: Column(
                     children: [
                       Feilds(
@@ -86,7 +87,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                       color: Colors.white,
                                     )
                                   : Text(
-                                      'LOGIN HERE',
+                                      'REGISTER HERE',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
@@ -97,6 +98,12 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         ),
                       ),
+                       TextButton(onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginPage()),
+                        );
+                      }, child: Text("Already A User?")),
                     ],
                   ),
                 ),

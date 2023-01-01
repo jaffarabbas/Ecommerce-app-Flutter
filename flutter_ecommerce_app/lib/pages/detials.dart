@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/pages/home.dart';
+import 'package:flutter_ecommerce_app/pages/payment.dart';
 import 'package:flutter_ecommerce_app/widgits/theme.dart';
 
 class ItemDetials extends StatefulWidget {
@@ -87,12 +88,38 @@ class _ItemDetialsState extends State<ItemDetials> {
                             child: Text(
                               '${widget.productInformation["decription"]}',
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14,
-                                color: Colors.black54
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                  color: Colors.black54),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PaymentPage()),
+                              );
+                            },
+                            child: Container(
+                              margin: EdgeInsets.only(top: 30),
+                              padding: EdgeInsets.symmetric(horizontal: 100,vertical: 15),
+                              decoration: BoxDecoration(
+                                color: AppTheme.primarybackground,
+                                borderRadius: BorderRadius.circular(
+                                  12,
+                                ),
+                              ),
+                              child: Text(
+                                'Place Order',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                ),
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     )

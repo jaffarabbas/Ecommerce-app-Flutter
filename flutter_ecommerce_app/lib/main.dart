@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_app/pages/login.dart';
+import 'package:flutter_ecommerce_app/pages/payment.dart';
+import 'package:flutter_ecommerce_app/pages/register.dart';
 import 'package:flutter_ecommerce_app/pages/splash.dart';
 import 'package:google_fonts/google_fonts.dart';
  
@@ -15,7 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       title: 'JZ Shoppers',
-      home: SplashScreen(),
+      home: LoginPage(),
     );
   }
 }

@@ -29,8 +29,8 @@ class AppDrawer extends StatelessWidget {
               decoration: BoxDecoration(
                 color: AppTheme.primarybackground,
               ),
-              accountName: Text("Jaffar"),
-              accountEmail: Text("gamaportal8@gmail.com"),
+              accountName: Text("Alyan"),
+              accountEmail: Text("aliyan@gmail.com"),
             ),
           ),
           InkWell(

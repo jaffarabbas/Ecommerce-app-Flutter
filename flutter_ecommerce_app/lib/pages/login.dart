@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/containers/_textFeild.dart';
 import 'package:flutter_ecommerce_app/pages/home.dart';
+import 'package:flutter_ecommerce_app/pages/register.dart';
 import 'package:flutter_ecommerce_app/widgits/theme.dart';
 
 void main() => runApp(LoginPage());
@@ -50,7 +51,6 @@ class _LoginPageState extends State<LoginPage> {
                 key: _formKey,
                 child: Container(
                   margin: EdgeInsets.only(top: 250),
-                  height: 300,
                   child: Column(
                     children: [
                       Feilds(
@@ -94,6 +94,12 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
+                      TextButton(onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => RegisterPage()),
+                        );
+                      }, child: Text("New User?")),
                     ],
                   ),
                 ),
